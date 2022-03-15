@@ -8,6 +8,10 @@ public class CheckingAccount {
     }
 
     public double deposit(double amount) {
+
+        if (amount <= 0){
+            throw new IllegalArgumentException("Deposit money more than 0");
+        }
         return balance += amount;
     }
 
