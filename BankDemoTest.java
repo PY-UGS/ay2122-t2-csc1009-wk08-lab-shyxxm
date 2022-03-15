@@ -19,6 +19,9 @@ public class BankDemoTest {
         } catch (InsufficientFundsException i) {
             System.out.println("Sorry, but your account is short by: $" + i.getAmount());
         }
+         catch (IllegalArgumentException e){
+             System.out.println(e.getMessage());
+         }
 
         input.close();
 
